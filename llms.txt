@@ -18,6 +18,7 @@ Start with AGENTS.md. Every script takes --client clients/<slug>.yaml. Credentia
 - [skills/search-term-review/SKILL.md](skills/search-term-review/SKILL.md): weekly search term review
 - [skills/keyword-research/SKILL.md](skills/keyword-research/SKILL.md): keyword themes with Keyword Planner data
 - [skills/generate-ads/SKILL.md](skills/generate-ads/SKILL.md): responsive search ads and assets
+- [skills/build-campaign/SKILL.md](skills/build-campaign/SKILL.md): build a full Search campaign from a plan, paused, dry run first
 - [skills/landing-page-check/SKILL.md](skills/landing-page-check/SKILL.md): landing page health and tracking
 - [skills/ppc-weekly-routine/SKILL.md](skills/ppc-weekly-routine/SKILL.md): weekly management loop
 - [skills/apply-google-ads-changes/SKILL.md](skills/apply-google-ads-changes/SKILL.md): safe change protocol and rollback
@@ -38,6 +39,7 @@ Start with AGENTS.md. Every script takes --client clients/<slug>.yaml. Credentia
 - [niches/real-estate-investors/ad-copy.md](niches/real-estate-investors/ad-copy.md): seller ad angles and compliance
 - [niches/real-estate-investors/benchmarks.md](niches/real-estate-investors/benchmarks.md): 2026 CPC and cost per qualified lead ranges
 - [niches/real-estate-investors/launch-plan.md](niches/real-estate-investors/launch-plan.md): launching a new account: budget, order, bidding, first 90 days
+- [niches/real-estate-investors/campaign-template.yaml](niches/real-estate-investors/campaign-template.yaml): ready-to-edit spec for a Sell House Fast Search campaign
 - [niches/real-estate-investors/conversion-setup.md](niches/real-estate-investors/conversion-setup.md): lead stages, stage values, CRM offline conversion uploads, call tracking
 - [niches/real-estate-investors/landing-pages.md](niches/real-estate-investors/landing-pages.md): seller landing pages by theme
 

@@ -19,4 +19,5 @@ Every script takes `--client clients/<slug>.yaml` and writes under `work/<slug>/
 | `negatives_apply.py` | Create, attach, add, remove, retire. Dry run by default | Yes, gated |
 | `negatives_restore.py` | Restore from a backup. Dry run by default | Yes, gated |
 | `validate_ad.py` | Checks a draft RSA and assets against editorial rules | No |
+| `campaign_build.py` | Builds a full Search campaign from a YAML spec in one atomic request, created paused; `--enable` turns it on. Dry run by default | Yes, gated |
 | `package_skills.py` | Builds `dist/*.skill` | No |

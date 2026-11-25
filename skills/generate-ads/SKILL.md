@@ -39,4 +39,4 @@ Tables of headlines (text, characters, pin, angle) and descriptions, paths, asse
 
 ## Approval
 
-Never publish. A person reviews and adds the ads in the UI or Editor.
+Never publish from this skill. A person reviews the copy; then it goes into a new campaign through the build-campaign skill, or a person adds it in the UI or Editor.

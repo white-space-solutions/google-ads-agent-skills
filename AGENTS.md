@@ -31,6 +31,7 @@ You are working in **google-ads-agent-skills**: skills, scripts and a playbook f
 | Weekly check, what did people search | search-term-review |
 | New campaign, new city, what keywords | keyword-research |
 | Ads, RSAs, headlines, sitelinks, callouts | generate-ads |
+| Launch, create, build or set up a campaign from a plan | build-campaign |
 | Landing pages, conversion rate dropped, site changed | landing-page-check |
 | Weekly routine across clients | ppc-weekly-routine |
 | Make an approved change, undo a change | apply-google-ads-changes |
@@ -50,5 +51,7 @@ You are working in **google-ads-agent-skills**: skills, scripts and a playbook f
 Audit: `pull.py` > `conversion_health.py` > `audit.py` > `landing_pages.py` > write the audit (google-ads-audit skill).
 
 Negatives: `pull.py --history-days 540` > `negatives_init.py` > edit `proposed.yaml` > `negatives_validate.py` (repeat until gates are 0) > summary for approval > `negatives_apply.py` dry run > approval > execute > `--retire-old` later.
+
+New campaign: keyword-research (`keyword_ideas.py`) > generate-ads (`validate_ad.py`) > fill `work/<slug>/build/<campaign>.yaml` from the niche `campaign-template.yaml` > `campaign_build.py --check-only` > `campaign_build.py` dry run > approval > execute (created paused) > review in the UI > approval > `--enable`.
 
 Weekly: `conversion_health.py` > `search_term_review.py --days 7` > approval > `negatives_apply.py --add-terms`.

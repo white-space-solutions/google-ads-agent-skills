@@ -23,10 +23,15 @@ This skill runs the scripts in the [google-ads-agent-skills](https://github.com/
 6. **Log.** Scripts append to `work/<slug>/changes.log.jsonl`. Add one line to the weekly note: what changed, why, what we expect to see.
 7. **Watch.** Run search-term-review after 7 days.
 
+## New campaigns
+
+Use the build-campaign skill. It follows this protocol and adds two rules: the campaign is created paused, and enabling it is a second approval (`campaign_build.py --enable`).
+
 ## Roll back
 
 - Negatives: `scripts/negatives_restore.py --client <yaml> --backup work/<slug>/backups/negatives-<stamp>` (dry run), then with `APPLY_ENABLED=1 ... --execute`.
 - Detached lists: reattach in the UI or rerun restore.
+- A new campaign: it was created paused; remove it in the UI. `work/<slug>/build/<campaign>.applied.json` lists what was created.
 
 ## Refusals are features
 

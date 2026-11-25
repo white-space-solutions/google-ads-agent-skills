@@ -25,4 +25,4 @@ This skill runs the scripts in the [google-ads-agent-skills](https://github.com/
 
 ## Approval
 
-Research only. Creating campaigns and keywords is done by a person in the UI or Google Ads Editor from the plan.
+Research only. To create the campaign from the approved plan, use the build-campaign skill (or a person builds it in the UI or Google Ads Editor).

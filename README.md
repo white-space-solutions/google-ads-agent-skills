@@ -1,6 +1,6 @@
 # Google Ads Agent Skills
 
-**Open-source Google Ads skills for AI agents.** Point Claude Code, Claude Cowork, Codex, a Grok bot or any agent that can run Python at a Google Ads account, and it can audit the account, check conversion tracking, rebuild negative keywords without blocking real customers, run the weekly search term review, research keywords, write ads and check landing pages. Every change is a dry run first and needs a person's approval.
+**Open-source Google Ads skills for AI agents.** Point Claude Code, Claude Cowork, Codex, a Grok bot or any agent that can run Python at a Google Ads account, and it can audit the account, check conversion tracking, rebuild negative keywords without blocking real customers, run the weekly search term review, research keywords, write ads, build complete Search campaigns and check landing pages. Every change is a dry run first and needs a person's approval.
 
 Built by [White Space Solutions](https://whitespacesolutions.ai) from audits and rebuilds of real lead generation accounts in 2026. Ships with a niche pack for **real estate investors: home buyers and wholesalers** who buy direct from sellers.
 
@@ -15,6 +15,7 @@ Built by [White Space Solutions](https://whitespacesolutions.ai) from audits and
 | [search-term-review](skills/search-term-review/SKILL.md) | Weekly: leaks, junk to block, customers being blocked, converting terms to add | After approval |
 | [keyword-research](skills/keyword-research/SKILL.md) | Keyword Planner volume and bids plus the account's own converting searches, grouped by intent | No |
 | [generate-ads](skills/generate-ads/SKILL.md) | Responsive search ads and assets that pass Google's editorial rules, validated by script | No |
+| [build-campaign](skills/build-campaign/SKILL.md) | A full Search campaign from a reviewed plan in one atomic request: budget, bidding, locations, schedule, negative lists, assets, ad groups, keywords, RSAs. Created paused | Yes, gated |
 | [landing-page-check](skills/landing-page-check/SKILL.md) | Broken pages, redirects, speed, form visibility, GCLID capture | No |
 | [ppc-weekly-routine](skills/ppc-weekly-routine/SKILL.md) | The weekly management loop for one client or a roster | No |
 | [apply-google-ads-changes](skills/apply-google-ads-changes/SKILL.md) | The protocol for any live change: dry run, approval, backup, execute, verify, roll back | Yes, gated |
@@ -22,9 +23,9 @@ Built by [White Space Solutions](https://whitespacesolutions.ai) from audits and
 Plus:
 
 - **[The playbook](docs/playbook/README.md)**: account structure, conversion tracking, keywords, negative keywords, ads, landing pages, Performance Max, weekly rhythm, safe changes.
-- **[Niche pack: real estate investors](niches/real-estate-investors/README.md)**: a launch plan for new accounts, conversion setup (lead stages, values, CRM uploads, calls), seller landing pages, starter negative lists (about 370 phrase terms), a seller allow-list, keyword themes, ad copy angles and 2026 benchmarks.
+- **[Niche pack: real estate investors](niches/real-estate-investors/README.md)**: a launch plan for new accounts, a ready-to-edit campaign spec, conversion setup (lead stages, values, CRM uploads, calls), seller landing pages, starter negative lists (about 370 phrase terms), a seller allow-list, keyword themes, ad copy angles and 2026 benchmarks.
 - **[Case studies](docs/case-studies/)**: a negative keyword rebuild that let sellers back in, and how conversion value drift slowed Performance Max.
-- **[Scripts](scripts/)**: read-only GAQL pulls, a deterministic audit, gate validation, gated apply with backup and restore.
+- **[Scripts](scripts/)**: read-only GAQL pulls, a deterministic audit, gate validation, gated apply with backup and restore, and a campaign builder.
 
 ## Quick start
 

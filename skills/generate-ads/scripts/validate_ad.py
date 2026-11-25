@@ -17,6 +17,9 @@ All keys optional except headlines/descriptions.
 
 Usage:  validate_ad.py draft.json
 Exit 0 = no errors (warnings allowed), 1 = errors found.
+
+Importable: validate(ad_dict) returns [("ERROR"|"WARNING", message), ...]
+(campaign_build.py uses it so nothing unvalidated reaches the account).
 """
 
 import json
@@ -70,10 +73,9 @@ def check_text(label, text, max_len, allow_exclaim):
         warn(f"{label}: 'click here' scores poorly: {text!r}")
 
 
-def main(path):
-    with open(path) as f:
-        ad = json.load(f)
-
+def validate(ad):
+    """Check one ad (plus optional assets). Returns a list of (level, message)."""
+    issues.clear()
     headlines = ad.get("headlines", [])
     descriptions = ad.get("descriptions", [])
 
@@ -165,10 +167,16 @@ def main(path):
             if len(v) > 25:
                 err(f"snippet '{s.get('header')}' value: {len(v)} chars (max 25): {v!r}")
 
-    errors = [m for lvl, m in issues if lvl == "ERROR"]
-    for lvl, msg in issues:
+    return list(issues)
+
+
+def main(path):
+    with open(path) as f:
+        found = validate(json.load(f))
+    errors = [m for lvl, m in found if lvl == "ERROR"]
+    for lvl, msg in found:
         print(f"{lvl}: {msg}")
-    print(f"\n{len(errors)} error(s), {len(issues) - len(errors)} warning(s)")
+    print(f"\n{len(errors)} error(s), {len(found) - len(errors)} warning(s)")
     return 1 if errors else 0
 
 

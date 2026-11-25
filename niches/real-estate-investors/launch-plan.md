@@ -1,6 +1,6 @@
 # Launch plan: a new Google Ads account for a home buyer or wholesaler
 
-For an account starting from zero, or one being rebuilt. Read with `keyword-themes.md`, `conversion-setup.md` and `landing-pages.md`.
+For an account starting from zero, or one being rebuilt. Read with `keyword-themes.md`, `conversion-setup.md` and `landing-pages.md`. To build the first campaign, copy `campaign-template.yaml` and use the build-campaign skill.
 
 ## Before spending a dollar
 

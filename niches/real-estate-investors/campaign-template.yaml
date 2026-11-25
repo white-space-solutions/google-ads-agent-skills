@@ -1,0 +1,113 @@
+# Campaign spec for scripts/campaign_build.py: a launch-ready "Sell House Fast" Search campaign
+# for a home buyer or wholesaler. Copy to work/<slug>/build/sell-house-fast.yaml and replace:
+#   - Springfield / the URLs / the geo IDs with your market and your real pages
+#   - every claim (7 days, 24 hours, no fees) with what you can prove (see ad-copy.md, Proof rules)
+#   - the negative list names with the lists negatives_apply.py created ({prefix} = list_prefix)
+# Then: dry run, show the output to a human, execute, review in the UI, --enable.
+# Find geo target IDs: Google Ads API geo_target_constant, or the "Geo targets" CSV on developers.google.com.
+
+campaign:
+  name: "Sell House Fast - Springfield"
+  daily_budget: 150                 # account currency per day; 10-15 clicks a day minimum (launch-plan.md)
+  bidding: maximize_conversions     # maximize_conversions | manual_cpc | maximize_clicks
+  # target_cpa: 250                 # only after ~30 conversions in 30 days on the goal you bid toward
+  # max_cpc: 40                     # cap for maximize_clicks
+  locations: [1016367]              # geo target constant IDs: your counties or cities
+  excluded_locations: []            # places inside the area you will not buy
+  location_option: presence         # people IN the area, not "interested in" it
+  languages: [1000]                 # 1000 = English
+  search_partners: false
+  ad_schedule:                      # hours someone answers the phone; remove to run 24/7
+    - {days: [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY], start_hour: 8, end_hour: 20}
+    - {days: [SATURDAY], start_hour: 9, end_hour: 17}
+  negative_lists:                   # must already exist (negative-keyword-audit skill)
+    - "ACME | Master Negatives"
+    - "ACME | Brands - Platforms & Brokerages"
+    - "ACME | Brands - Cash Buyer Competitors"
+    - "ACME | Research & Reviews"
+    - "ACME | Locations - Out of Area"
+  negative_keywords: []             # campaign-only extras, e.g. {term: "home value", match: PHRASE}
+  # final_url_suffix: "utm_source=google&utm_medium=cpc&utm_campaign={campaignid}"
+
+assets:
+  sitelinks:
+    - {title: "How It Works", description_1: "Three steps to a cash offer", description_2: "Pick your closing date", final_url: "https://example.com/how-it-works"}
+    - {title: "Get My Offer", description_1: "Answer a few questions", description_2: "Offer within 24 hours", final_url: "https://example.com/get-offer"}
+    - {title: "Inherited Homes", description_1: "Sell a house you inherited", description_2: "No cleanout needed", final_url: "https://example.com/inherited"}
+    - {title: "Rental Property", description_1: "Sell with tenants in place", description_2: "No need to evict first", final_url: "https://example.com/landlords"}
+    - {title: "Seller Reviews", description_1: "Read what sellers say", description_2: "Real local homeowners", final_url: "https://example.com/reviews"}
+    - {title: "Seller FAQ", description_1: "Fees, timing and the offer", description_2: "Straight answers", final_url: "https://example.com/faq"}
+  callouts: ["No Fees", "No Repairs", "No Commissions", "Any Condition", "Local Buyer", "Cash Offer In 24 Hrs", "Pick Your Close Date", "No Showings"]
+  structured_snippets:
+    - {header: "Types", values: ["Inherited", "Rentals", "Fixer-Uppers", "Vacant", "Probate", "Divorce"]}
+  # call: {phone_number: "+1 555 555 0100", country_code: US}   # only if a human answers during ad hours
+
+ad_groups:
+  - name: "Sell House Fast"
+    final_url: "https://example.com/sell-house-fast"
+    default_match: PHRASE           # plain keywords = phrase; [x] = exact; "x" = phrase
+    keywords:
+      - sell my house fast
+      - "[sell my house fast]"
+      - sell house fast
+      - "[sell house fast]"
+      - sell my house fast springfield
+      - sell my house for cash
+      - "[sell my house for cash]"
+    ads:
+      - path1: "Sell-Fast"
+        path2: "Springfield"
+        headlines:
+          - {text: "Sell Your House Fast", pin: 1}
+          - {text: "Sell My House Fast Today", pin: 1}
+          - {text: "Sell Your House Fast For Cash", pin: 1}
+          - {text: "Fair Cash Offer In 24 Hours"}
+          - {text: "No Fees Or Commissions"}
+          - {text: "Sell As-Is. No Repairs."}
+          - {text: "Pick Your Closing Date"}
+          - {text: "Close In As Little As 7 Days"}
+          - {text: "Skip Showings And Cleaning"}
+          - {text: "Local Springfield Home Buyer"}
+          - {text: "Get Your Cash Offer Today"}
+          - {text: "Any Condition, Any Situation"}
+          - {text: "No-Obligation Cash Offer"}
+          - {text: "Inherited A House? Sell Fast"}
+          - {text: "Behind On Payments? Call Now"}
+        descriptions:
+          - "Get a fair cash offer in 24 hours. No fees, repairs or showings."
+          - "Sell as-is in any condition. Close on the date that works for you."
+          - "Local buyer, not a listing agent. No commissions and no closing fees."
+          - "Answer a few questions in 2 minutes and get a no-obligation offer."
+
+  - name: "Sell House As Is"
+    final_url: "https://example.com/sell-house-as-is"
+    keywords:
+      - sell house as is
+      - "[sell house as is]"
+      - sell my house as is
+      - sell house that needs repairs
+      - sell fixer upper house
+    ads:
+      - path1: "As-Is"
+        path2: "Cash-Offer"
+        headlines:
+          - {text: "Sell Your House As-Is", pin: 1}
+          - {text: "Sell Your House As-Is Fast", pin: 1}
+          - {text: "Sell As-Is For Cash", pin: 1}
+          - {text: "No Repairs. No Cleaning."}
+          - {text: "Fair Cash Offer In 24 Hours"}
+          - {text: "No Fees Or Commissions"}
+          - {text: "Leave Unwanted Items Behind"}
+          - {text: "Pick Your Closing Date"}
+          - {text: "Close In As Little As 7 Days"}
+          - {text: "Fixer-Upper? Get An Offer"}
+          - {text: "Local Springfield Home Buyer"}
+          - {text: "Get Your Cash Offer Today"}
+          - {text: "Any Condition, Any Situation"}
+          - {text: "No-Obligation Cash Offer"}
+          - {text: "Skip The Repairs And Showings"}
+        descriptions:
+          - "Sell your house as-is. No repairs, no cleaning, no showings needed."
+          - "Get a fair cash offer in 24 hours and close on the date you choose."
+          - "Foundation, roof or full rehab: a local buyer who takes it as-is."
+          - "No fees or commissions. Answer a few questions to get your offer."

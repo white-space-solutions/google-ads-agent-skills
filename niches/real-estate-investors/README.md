@@ -14,6 +14,7 @@ New account? Start with `launch-plan.md`. Set `niche: real-estate-investors` in 
 | `ad-copy.md` | generate-ads skill | Angles, proof points and compliance notes for seller ads |
 | `benchmarks.md` | audit skill | What "good" looks like for CPC, cost per lead, cost per qualified lead |
 | `launch-plan.md` | new accounts | Budget, launch order, bidding and the first 90 days |
+| `campaign-template.yaml` | build-campaign | A complete Sell House Fast Search campaign spec: two ad groups, keywords, RSAs, assets, schedule |
 | `conversion-setup.md` | conversion-tracking-audit skill | Lead stages, stage values from your own numbers, CRM uploads, calls, end-to-end test |
 | `landing-pages.md` | landing-page-check skill | Page per theme, above-the-fold checklist, tracking fields, compliance |
 
