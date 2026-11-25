@@ -22,7 +22,7 @@ Built by [White Space Solutions](https://whitespacesolutions.ai) from audits and
 Plus:
 
 - **[The playbook](docs/playbook/README.md)**: account structure, conversion tracking, keywords, negative keywords, ads, landing pages, Performance Max, weekly rhythm, safe changes.
-- **[Niche pack: real estate investors](niches/real-estate-investors/README.md)**: starter negative lists (about 370 phrase terms), a seller allow-list, seller-intent rules, keyword themes, ad copy angles and 2026 benchmarks.
+- **[Niche pack: real estate investors](niches/real-estate-investors/README.md)**: a launch plan for new accounts, conversion setup (lead stages, values, CRM uploads, calls), seller landing pages, starter negative lists (about 370 phrase terms), a seller allow-list, keyword themes, ad copy angles and 2026 benchmarks.
 - **[Case studies](docs/case-studies/)**: a negative keyword rebuild that let sellers back in, and how conversion value drift slowed Performance Max.
 - **[Scripts](scripts/)**: read-only GAQL pulls, a deterministic audit, gate validation, gated apply with backup and restore.
 

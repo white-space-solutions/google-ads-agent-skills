@@ -15,7 +15,7 @@ This skill runs the scripts in the [google-ads-agent-skills](https://github.com/
 
 1. `scripts/conversion_health.py --client clients/<slug>.yaml` writes `work/<slug>/reviews/conversion-health-<date>.md`.
 2. If you need history: `scripts/pull.py --client ... --only conversion_actions conversions_by_action_week conversions_by_action_day campaign_goals offline_upload_summary offline_upload_by_action campaign_conv_by_action`
-3. Work the checklist in `docs/playbook/02-conversion-tracking.md`.
+3. Work the checklist in `docs/playbook/02-conversion-tracking.md`, and the niche pack's `conversion-setup.md` if it has one (stage definitions, value worksheet, CRM upload options, call tracking).
 4. Ask the business: which stage does each action represent, who or what uploads it, and how values are set. Write the answers down.
 
 ## Output

@@ -37,6 +37,9 @@ Start with AGENTS.md. Every script takes --client clients/<slug>.yaml. Credentia
 - [niches/real-estate-investors/keyword-themes.md](niches/real-estate-investors/keyword-themes.md): campaign and ad group themes
 - [niches/real-estate-investors/ad-copy.md](niches/real-estate-investors/ad-copy.md): seller ad angles and compliance
 - [niches/real-estate-investors/benchmarks.md](niches/real-estate-investors/benchmarks.md): 2026 CPC and cost per qualified lead ranges
+- [niches/real-estate-investors/launch-plan.md](niches/real-estate-investors/launch-plan.md): launching a new account: budget, order, bidding, first 90 days
+- [niches/real-estate-investors/conversion-setup.md](niches/real-estate-investors/conversion-setup.md): lead stages, stage values, CRM offline conversion uploads, call tracking
+- [niches/real-estate-investors/landing-pages.md](niches/real-estate-investors/landing-pages.md): seller landing pages by theme
 
 ## Case studies
 - [docs/case-studies/negative-keyword-rebuild.md](docs/case-studies/negative-keyword-rebuild.md)

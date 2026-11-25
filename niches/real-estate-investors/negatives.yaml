@@ -77,7 +77,7 @@ lists:
     fill_from: competitors                     # adds the client's competitors list
     exempt_from_intent_gate: true              # routes competitor searches to the competitor campaign on purpose
     groups:
-      National cash buyers: [homevestors, we buy ugly houses, express homebuyers, national home buyers]
+      National cash buyers: [homevestors, we buy ugly houses, national home buyers]
 
   - name: "{prefix} | Research & Reviews"
     match: PHRASE

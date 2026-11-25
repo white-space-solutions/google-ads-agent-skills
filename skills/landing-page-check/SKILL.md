@@ -15,7 +15,7 @@ This skill runs the scripts in the [google-ads-agent-skills](https://github.com/
 2. `scripts/landing_pages.py --client ...` writes `work/<slug>/reviews/landing-pages.md`.
 3. For every flagged URL, open it and confirm: the status, where it redirects, whether the form or phone is above the fold on mobile, and whether the headline matches the ad group's pinned headline.
 4. Check tracking: submit a test lead with `?gclid=TEST123` on the URL and confirm the CRM record stores the GCLID and UTMs (ask the person to check the CRM if you cannot).
-5. Read `docs/playbook/06-landing-pages.md` and list fixes, most spend first.
+5. Read `docs/playbook/06-landing-pages.md` and the niche pack's `landing-pages.md`, and list fixes, most spend first.
 
 ## Approval
 

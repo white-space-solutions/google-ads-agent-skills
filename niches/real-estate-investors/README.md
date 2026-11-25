@@ -2,7 +2,7 @@
 
 For home buyers, wholesalers and "we buy houses" companies that run Google Ads to reach homeowners who want to sell. Everything here was learned running and auditing these accounts in 2026: seller-intent search, Performance Max, competitor conquesting, CRM-qualified conversions.
 
-Set `niche: real-estate-investors` in the client yaml and the scripts pick up:
+New account? Start with `launch-plan.md`. Set `niche: real-estate-investors` in the client yaml and the scripts pick up:
 
 | File | Used by | What it is |
 |---|---|---|
@@ -13,6 +13,9 @@ Set `niche: real-estate-investors` in the client yaml and the scripts pick up:
 | `keyword-themes.md` | keyword-research skill | Campaign and ad group architecture by intent |
 | `ad-copy.md` | generate-ads skill | Angles, proof points and compliance notes for seller ads |
 | `benchmarks.md` | audit skill | What "good" looks like for CPC, cost per lead, cost per qualified lead |
+| `launch-plan.md` | new accounts | Budget, launch order, bidding and the first 90 days |
+| `conversion-setup.md` | conversion-tracking-audit skill | Lead stages, stage values from your own numbers, CRM uploads, calls, end-to-end test |
+| `landing-pages.md` | landing-page-check skill | Page per theme, above-the-fold checklist, tracking fields, compliance |
 
 ## How sellers search
 

@@ -1,10 +1,10 @@
 # Example output: weekly search term review
 
-*Fictional business, real patterns. This is what the search-term-review skill produces.*
+*Based on a real account, anonymized: business name invented, figures rounded. This is what the search-term-review skill produces.*
 
-# Bayside Home Buyers: weekly negative keyword check, Nov 2, 2026
+# Example Home Buyers: weekly negative keyword check
 
-Window: Oct 26 to Nov 2. First full week on the new negative lists. 839 impressions, 47 clicks, $4,726, 4.0 conversions.
+Window: one week. First full week on the new negative lists. About 850 impressions, 50 clicks, $4,700, 4 conversions.
 
 ## 1. Leaks
 
@@ -16,9 +16,9 @@ About 80 terms, most with 1 to 6 impressions. The ones with clicks:
 
 | Search term | Clicks | Spend | Conv |
 |---|---|---|---|
-| we buy houses for cash | 2 | $284 | 1.0 |
-| opendoor competitors | 1 | $98 | 1.0 |
-| best companies that buy houses for cash | 1 | $82 | 0 |
+| we buy houses for cash | 2 | ~$280 | 1 |
+| opendoor competitors | 1 | ~$100 | 1 |
+| best companies that buy houses for cash | 1 | ~$80 | 0 |
 
 Both conversions in the generic campaign this week came from terms the old lists would have blocked.
 
@@ -26,14 +26,14 @@ Both conversions in the generic campaign this week came from terms the old lists
 
 | Search term | Spend | Suggested phrase negative | List |
 |---|---|---|---|
-| landforcashmoney | $82 | "landforcashmoney" | Cash Buyer Competitors |
+| (a land-buying company's name) | ~$80 | the company name | Cash Buyer Competitors |
 
 No conflict with 18 months of converting terms or the seller allow-list.
 
 ## 4. Looked at, not adding
 
-- "another local cash buyer" ($146): a competitor name, but a similar search converted before. Leave it.
-- "redfin agent fee" ($95), "how to sell by owner house" ($79): sellers weighing their options. These are the searches the new setup is meant to let through.
+- A local cash buyer's name (~$150): a competitor name, but a similar search converted before. Leave it.
+- "redfin agent fee" (~$95), "how to sell by owner house" (~$80): sellers weighing their options. These are the searches the new setup is meant to let through.
 
 ## 5. Structure
 
