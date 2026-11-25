@@ -1,0 +1,6 @@
+# Patterns that identify a real seller. negatives_validate.py gate G4 refuses any proposed negative
+# that blocks a real search term matching customer_intent (unless the list is marked
+# exempt_from_intent_gate, or the term is an accepted exception with a written reason).
+customer_intent: '\b(sell|sells|selling|sellers?|sold my|list my|buy my|buys? (my )?(house|home|property)|cash (for|offers?|buyers?|homes?|house)|home buyers?|house buyers?|homebuyers?|we buy|offers? (on|for) (my )?(house|home)|value my|worth|inherit\w*|probate|foreclos\w*|tenants?|landlords?|as is|behind on|divorce|fixer|repairs?|opendoor|open door|offerpad|ibuyers?|sundae|homelight)\b'
+not_customer: 'first time home buyers?|for sale(?! by owner)|for rent|homes for|houses for|how to (wholesale|flip|invest)|wholesaling|become a|start a'
+stopwords: a an the to for my of in on is i me do how can near you your with without house home houses homes sell buy cash fast

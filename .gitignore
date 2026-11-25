@@ -1,0 +1,19 @@
+# Secrets
+.env
+.env.*
+!.env.example
+credentials.json
+google-ads.yaml
+*.pem
+
+# Client data stays local
+work/
+clients/*.yaml
+!clients/example.yaml
+
+# Python
+__pycache__/
+.venv/
+.pytest_cache/
+*.pyc
+.DS_Store

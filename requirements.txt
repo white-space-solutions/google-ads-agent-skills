@@ -1,0 +1,5 @@
+google-ads>=27.0.0
+google-auth-oauthlib>=1.2
+python-dotenv>=1.0
+PyYAML>=6.0
+openpyxl>=3.1

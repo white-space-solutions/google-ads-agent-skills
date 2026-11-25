@@ -1,0 +1,10 @@
+{
+  "name": "google-ads-agent-skills",
+  "version": "1.0.0",
+  "description": "Google Ads skills for AI agents: audit, conversion tracking, negative keywords with safety gates, weekly search term review, keyword research, ad copy, landing page checks. Niche pack for real estate investors.",
+  "author": { "name": "White Space Solutions", "url": "https://whitespacesolutions.ai" },
+  "homepage": "https://github.com/white-space-solutions/google-ads-agent-skills",
+  "repository": "https://github.com/white-space-solutions/google-ads-agent-skills",
+  "license": "MIT",
+  "keywords": ["google-ads", "ppc", "negative-keywords", "agent-skills", "real-estate-investing", "lead-generation"]
+}

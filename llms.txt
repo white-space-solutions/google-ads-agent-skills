@@ -1,0 +1,43 @@
+# Google Ads Agent Skills
+
+> Open-source skills, scripts and a playbook that let AI agents (Claude Code, Claude Cowork, Codex, Grok bots and others) audit and manage Google Ads accounts for lead generation businesses, with every change dry-run first and approved by a person. Includes a niche pack for real estate investors (home buyers and wholesalers). By White Space Solutions. MIT license.
+
+Start with AGENTS.md. Every script takes --client clients/<slug>.yaml. Credentials live in .env (docs/setup.md).
+
+## Agent entry points
+- [AGENTS.md](AGENTS.md): where everything is, which skill to use, hard rules
+- [README.md](README.md): overview, install, safety model, FAQ
+- [docs/install.md](docs/install.md): installing in Claude Code, Cowork, Codex, Grok bots
+- [docs/setup.md](docs/setup.md): Google Ads API developer token, OAuth, refresh token, MCC vs direct access
+
+## Skills
+- [skills/google-ads-setup/SKILL.md](skills/google-ads-setup/SKILL.md): connect an agent to a Google Ads account
+- [skills/google-ads-audit/SKILL.md](skills/google-ads-audit/SKILL.md): full account audit, ranked fixes with evidence
+- [skills/conversion-tracking-audit/SKILL.md](skills/conversion-tracking-audit/SKILL.md): offline conversion uploads, value drift, goals
+- [skills/negative-keyword-audit/SKILL.md](skills/negative-keyword-audit/SKILL.md): negative keyword rebuild with four safety gates
+- [skills/search-term-review/SKILL.md](skills/search-term-review/SKILL.md): weekly search term review
+- [skills/keyword-research/SKILL.md](skills/keyword-research/SKILL.md): keyword themes with Keyword Planner data
+- [skills/generate-ads/SKILL.md](skills/generate-ads/SKILL.md): responsive search ads and assets
+- [skills/landing-page-check/SKILL.md](skills/landing-page-check/SKILL.md): landing page health and tracking
+- [skills/ppc-weekly-routine/SKILL.md](skills/ppc-weekly-routine/SKILL.md): weekly management loop
+- [skills/apply-google-ads-changes/SKILL.md](skills/apply-google-ads-changes/SKILL.md): safe change protocol and rollback
+
+## Playbook
+- [docs/playbook/README.md](docs/playbook/README.md): principles and chapter index
+- [docs/playbook/02-conversion-tracking.md](docs/playbook/02-conversion-tracking.md): conversion signal rules
+- [docs/playbook/04-negative-keywords.md](docs/playbook/04-negative-keywords.md): negative keyword rules and gates
+- [docs/playbook/09-safe-changes.md](docs/playbook/09-safe-changes.md): write safety contract
+- [docs/playbook/ads-rsa-spec.md](docs/playbook/ads-rsa-spec.md): responsive search ad spec
+- [docs/playbook/ads-assets-spec.md](docs/playbook/ads-assets-spec.md): sitelinks, callouts, snippets spec
+
+## Niche pack: real estate investors (home buyers, wholesalers)
+- [niches/real-estate-investors/README.md](niches/real-estate-investors/README.md): seller search intent, words that look like junk but are sellers
+- [niches/real-estate-investors/negatives.yaml](niches/real-estate-investors/negatives.yaml): five starter negative lists
+- [niches/real-estate-investors/allow-list.txt](niches/real-estate-investors/allow-list.txt): seller searches never to block
+- [niches/real-estate-investors/keyword-themes.md](niches/real-estate-investors/keyword-themes.md): campaign and ad group themes
+- [niches/real-estate-investors/ad-copy.md](niches/real-estate-investors/ad-copy.md): seller ad angles and compliance
+- [niches/real-estate-investors/benchmarks.md](niches/real-estate-investors/benchmarks.md): 2026 CPC and cost per qualified lead ranges
+
+## Case studies
+- [docs/case-studies/negative-keyword-rebuild.md](docs/case-studies/negative-keyword-rebuild.md)
+- [docs/case-studies/conversion-value-drift.md](docs/case-studies/conversion-value-drift.md)

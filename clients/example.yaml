@@ -1,0 +1,29 @@
+# Copy to clients/<slug>.yaml. Not secret (secrets live in .env), but keep real client files out of
+# public forks: clients/*.yaml except this example is gitignored.
+
+slug: acme                      # folder name under work/
+customer_id: "123-456-7890"     # the ad account
+login_customer_id: "123-456-7890"   # MCC ID if you access through a manager; the account itself if added directly. check_connection.py tells you.
+niche: real-estate-investors    # folder under niches/, or remove
+
+brand_terms:                    # your own name and misspellings; added as negatives on non-brand campaigns
+  - acme home buyers
+  - acme homebuyers
+competitors:                    # other businesses' names; routed to the competitor campaign
+  - rival home buyers
+list_prefix: ACME               # negative list names start with this
+
+service_area:
+  include_terms: [springfield, shelbyville, illinois]   # places you serve; never negated
+  exclude_terms: [capital city, ogdenville]             # nearby places you do not serve
+  geo_target_ids: [1016367]                              # Google geo target constants for keyword_ideas.py
+
+campaign_roles:                 # campaign name prefixes -> role (case-insensitive)
+  generic: ["Sell House Fast", "Situations"]
+  competitors: ["Competitors"]
+  brand: ["Branded"]
+  valuation: ["Home Value"]
+
+safety:
+  allowed_customer_ids: ["123-456-7890"]   # the only accounts write scripts may touch
+  max_ops_per_run: 500

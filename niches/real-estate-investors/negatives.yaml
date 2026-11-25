@@ -1,0 +1,88 @@
+# Starter negative keyword structure for home buyers and wholesalers buying direct from sellers.
+# negatives_init.py copies this into work/<client>/negatives/proposed.yaml and fills {prefix},
+# client competitors and out-of-area places. Every term is PHRASE match: a phrase negative blocks
+# the words together, in order, and never expands to plurals or misspellings.
+#
+# attach_to uses campaign roles from the client yaml:
+#   generic      seller-intent campaigns (sell house fast, cash home buyers, situations)
+#   competitors  campaigns that bid on other cash buyers' names on purpose
+#   brand        campaigns that bid on the client's own name
+#   valuation    "what is my house worth" campaigns
+#
+# Built from real account rebuilds in 2026. Read docs/playbook/04-negative-keywords.md before editing.
+lists:
+  - name: "{prefix} | Master Negatives"
+    match: PHRASE
+    attach_to: [generic, competitors, brand, valuation]
+    # Sellers of mobile homes, land, timeshares and commercial property are real sellers, so gate G4
+    # would flag them. If the client does not buy these, the block is deliberate. If the client DOES
+    # buy mobile homes or land, delete those terms.
+    exempt_groups_from_intent_gate: [Non-house assets]
+    groups:
+      Buyers and renters: [homes for sale, houses for sale, house for sale in, condos for sale, townhomes for sale, for sale near me,
+        buy a home, buying a home, first time home buyer, first time home buyers, first time buyer, home buyer grant, down payment,
+        mortgage rates, mortgage lender, get a mortgage, refinance, heloc, home equity loan, fha loan, va loan, pre approval, prequalified,
+        for rent, rent to own homes, rent to own houses, apartments, apartment for, rentals near me, renters insurance, lease to own,
+        sublet, roommate, section 8, hud homes, foreclosure listings, foreclosure list, bank owned, reo properties, home auction,
+        open house, new construction, floor plans, luxury homes, mansions, tiny house]
+      Agents and listing: [association of realtors, realty group, reo agents, real estate office, real estate offices, real estate company,
+        real estate listings, real estate market, real estate trends, real estate near me, real estate sites, real estate team,
+        real estate group, real estate for sale, brokerage, mortgage broker, multiple listing service, relator, relators, realter, realters,
+        realtor near me, best realtor, find a realtor, real estate agent near me, real estate agents near me, best real estate agent,
+        real estate license, real estate school, mls listings, broker near me, flat fee mls, fsbo websites]
+      Jobs and education: [jobs, careers, hiring, salary, internship, resume, course, courses, class, classes, training, seminar,
+        workshop, exam, books, podcast, youtube, wiki]
+      Investor side, not sellers: [wholesale real estate, wholesaling, how to wholesale, wholesale housing, wholesale calculator,
+        assignment fee, motivated sellers, buyers list, skip tracing, cold calling, propstream, batchleads, investorlift, fix and flip,
+        hard money, real estate investing, how to invest, flip houses, how to flip, become a cash buyer, start a we buy houses business,
+        work with wholesalers]
+      Records and tax lookups: [property records, property tax rate, pay property tax, tax assessor, capital gains tax rate, estate sales near me]
+      Services and DIY: [contractor, handyman, plumber near me, plumbing services, roofer near me, roofing company, house painting,
+        painter near me, kitchen remodel, renovation loan, interior design, moving company, movers, storage unit, junk removal,
+        house cleaning, home insurance, pest control, property management, home warranty]
+      Non-house assets: [car, cars, truck, sell gold, gold buyers, gold price, jewelry, timeshare, boat, rv, mobile home, mobile homes,
+        manufactured home, manufactured homes, motorhome, furniture, clothes, clothing, commercial property, office space, land for sale]
+      Short-term rental: [airbnb, vrbo, celebrity homes, vacation rental]
+      Spanish browsing terms: [cuanto vale, apartamentos, renta]
+
+  - name: "{prefix} | Locations - Out of Area"
+    match: PHRASE
+    attach_to: [generic, competitors, brand, valuation]
+    fill_from: out_of_area          # adds service_area.exclude_terms; drops anything in service_area.include_terms
+    exempt_from_intent_gate: true   # blocks "sell my house fast <other city>" on purpose
+    groups:
+      States: [alabama, alaska, arizona, arkansas, california, colorado, connecticut, delaware, florida, georgia, hawaii, idaho, illinois,
+        indiana, iowa, kansas, kentucky, louisiana, maine, maryland, massachusetts, michigan, minnesota, mississippi, missouri, montana,
+        nebraska, nevada, new hampshire, new jersey, new mexico, new york, north carolina, north dakota, ohio, oklahoma, oregon,
+        pennsylvania, rhode island, south carolina, south dakota, tennessee, texas, utah, vermont, virginia, washington state, wisconsin, wyoming]
+      Major metros: [houston, dallas, austin, san antonio, phoenix, tucson, las vegas, reno, seattle, portland, denver, atlanta, miami,
+        tampa, orlando, jacksonville, charlotte, chicago, detroit, philadelphia, baltimore, birmingham, memphis, nashville, boise,
+        salt lake city, albuquerque, st louis, indianapolis, columbus, cleveland, los angeles, san diego, sacramento, san francisco,
+        san jose, long island, buffalo, rochester, pittsburgh, boston, minneapolis, kansas city, oklahoma city, raleigh]
+
+  - name: "{prefix} | Brands - Platforms & Brokerages"
+    match: PHRASE
+    attach_to: [generic, competitors, brand, valuation]
+    groups:
+      Listing portals: [zestimate, trulia, auction com, xome, hubzu, movoto com, craigslist apartments, craigslist rentals]
+      Agent-matching and flat-fee platforms: [clever real estate, fasterhouse, homecoin, shopprop, your home sold guaranteed]
+      Brokerages: [compass realty, keller williams, kw realty, kw advisors, coldwell banker, century 21, remax, re max, sothebys, sotheby's,
+        berkshire hathaway, exp realty]
+    # Not blocked on purpose: opendoor, offerpad, sundae, homelight, zillow. Sellers comparing iBuyers convert,
+    # often below account-average cost. Block Zillow *browsing* with "for sale" and "for rent" in Master instead.
+
+  - name: "{prefix} | Brands - Cash Buyer Competitors"
+    match: PHRASE
+    attach_to: [generic, brand, valuation]   # NOT competitors: that campaign bids on these names
+    fill_from: competitors                     # adds the client's competitors list
+    exempt_from_intent_gate: true              # routes competitor searches to the competitor campaign on purpose
+    groups:
+      National cash buyers: [homevestors, we buy ugly houses, express homebuyers, national home buyers]
+
+  - name: "{prefix} | Research & Reviews"
+    match: PHRASE
+    attach_to: [generic, valuation]   # competitor reviews belong to the competitor campaign, own reviews to brand
+    groups:
+      Reviews and complaints: [reviews, review, complaints, complaint, scam, scams, bbb, better business bureau, yelp, reddit,
+        lawsuit, sued, ripoff, rip off]
+      Company lookup: [who owns, phone number, office address, headquarters, net worth, ceo, founder, glassdoor, indeed]

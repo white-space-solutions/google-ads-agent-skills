@@ -1,0 +1,81 @@
+# Seller searches that must never be blocked on generic campaigns. negatives_validate.py (gate G3)
+# fails if any proposed negative blocks one of these. Add the client's own cities in
+# work/<client>/allow-list.txt, for example "sell my house fast <city>".
+sell my house fast
+sell house fast
+sell my home fast
+sell my house for cash
+sell house for cash
+cash home buyers
+cash home buyers near me
+cash house buyers
+we buy houses
+we buy houses for cash
+we buy houses as is
+who buys houses for cash
+who buys houses for cash near me
+companies that buy houses for cash
+companies that buy homes for cash
+companies that buy houses as is
+cash offer for my house
+get a free cash offer for my house
+buy my house for cash
+cash for my house
+need to sell my house fast
+sell my house today
+how to sell my house fast for cash
+best way to sell a house fast
+can you sell a house as is
+sell house as is
+sell house no commission
+sell house no fees
+sell house without realtor
+sell house without a realtor
+sell my house without a realtor fast
+sell house by owner
+sell house to investor
+investors who buy houses
+real estate investors who buy houses
+real estate investors buy houses
+sell house to wholesaler
+sell inherited house
+sell my inherited house fast
+sell my inherited house for cash
+selling an inherited house
+sell inherited house capital gains
+probate home buyers
+probate house sale
+sell estate sale house
+sell house before foreclosure
+avoid foreclosure sell house
+sell house short sale
+sell house with mortgage
+sell house underwater mortgage
+sell house during bankruptcy
+sell house with tax lien
+sell house behind on property taxes
+selling a house with a lien
+sell house with code violations
+sell house with tenants
+sell rental property
+tired landlord sell house
+sell house after divorce
+sell fixer upper
+sell house that needs repairs
+sell damaged house
+sell fire damaged house
+sell hoarder house
+sell house with plumbing problems
+sell house needs roof replacement
+sell house without renovation
+sell condo for cash
+sell duplex fast
+opendoor competitors
+opendoor vs offerpad
+how does opendoor work
+zillow cash offer
+how much is my house worth
+what is my house worth
+sell my house calculator
+redfin agent fee
+sell my house by owner

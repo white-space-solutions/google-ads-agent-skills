@@ -1,0 +1,11 @@
+{
+  "name": "white-space-solutions",
+  "owner": { "name": "White Space Solutions", "url": "https://whitespacesolutions.ai" },
+  "plugins": [
+    {
+      "name": "google-ads-agent-skills",
+      "source": "./",
+      "description": "Google Ads skills for AI agents with human-approved, gated changes. Includes a real estate investor niche pack."
+    }
+  ]
+}
